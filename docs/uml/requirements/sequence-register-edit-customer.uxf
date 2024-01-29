@@ -1,0 +1,39 @@
+<diagram program="umletino" version="15.1"><zoom_level>7</zoom_level><element><id>Relation</id><coordinates><x>154</x><y>63</y><w>21</w><h>651</h></coordinates><panel_attributes>lt=.</panel_attributes><additional_attributes>10;10;10;910</additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>98</x><y>35</y><w>133</w><h>35</h></coordinates><panel_attributes>_:RegisterEdtCustomerPresenter_</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>266</x><y>35</y><w>112</w><h>35</h></coordinates><panel_attributes>_:RegisterEditCustomerView_</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>315</x><y>63</y><w>21</w><h>637</h></coordinates><panel_attributes>lt=.</panel_attributes><additional_attributes>10;10;10;890</additional_attributes></element><element><id>Relation</id><coordinates><x>35</x><y>77</y><w>133</w><h>28</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
+onSaveCustomer()</panel_attributes><additional_attributes>170;20;10;20</additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>154</x><y>91</y><w>14</w><h>581</h></coordinates><panel_attributes></panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>476</x><y>63</y><w>21</w><h>637</h></coordinates><panel_attributes>lt=.</panel_attributes><additional_attributes>10;10;10;890</additional_attributes></element><element><id>Relation</id><coordinates><x>700</x><y>63</y><w>28</w><h>623</h></coordinates><panel_attributes>lt=.</panel_attributes><additional_attributes>10;10;20;870</additional_attributes></element><element><id>Relation</id><coordinates><x>161</x><y>112</y><w>168</w><h>28</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
+getCustomerInfo()</panel_attributes><additional_attributes>220;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>161</x><y>147</y><w>168</w><h>28</h></coordinates><panel_attributes>lt=&lt;.
+info</panel_attributes><additional_attributes>10;20;220;20</additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>315</x><y>126</y><w>14</w><h>35</h></coordinates><panel_attributes></panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLFrame</id><coordinates><x>63</x><y>196</y><w>686</w><h>462</h></coordinates><panel_attributes>alt
+--
+[empty info || invalid info]
+
+
+
+
+
+
+
+
+
+
+-.
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>665</x><y>35</y><w>84</w><h>35</h></coordinates><panel_attributes>_:UserDAO_</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>427</x><y>35</y><w>112</w><h>35</h></coordinates><panel_attributes>_customer: Customer</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>161</x><y>231</y><w>168</w><h>28</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
+ShowErrorMessage(title,msg)</panel_attributes><additional_attributes>220;20;10;20</additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>553</x><y>35</y><w>91</w><h>35</h></coordinates><panel_attributes>_:CustomerDAO_</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>595</x><y>63</y><w>21</w><h>637</h></coordinates><panel_attributes>lt=.</panel_attributes><additional_attributes>10;10;10;890</additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>595</x><y>490</y><w>14</w><h>35</h></coordinates><panel_attributes></panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>161</x><y>455</y><w>329</w><h>28</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
+setCustomerInfo(customerInfo)</panel_attributes><additional_attributes>450;20;10;20</additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>476</x><y>455</y><w>14</w><h>35</h></coordinates><panel_attributes></panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>0</x><y>287</y><w>168</w><h>28</h></coordinates><panel_attributes>lt=&lt;.
+</panel_attributes><additional_attributes>10;20;220;20</additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>315</x><y>245</y><w>14</w><h>42</h></coordinates><panel_attributes></panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>161</x><y>273</y><w>168</w><h>28</h></coordinates><panel_attributes>lt=&lt;.
+</panel_attributes><additional_attributes>10;20;220;20</additional_attributes></element><element><id>UMLFrame</id><coordinates><x>105</x><y>343</y><w>630</w><h>280</h></coordinates><panel_attributes>alt
+--
+[customer== null]
+
+
+
+
+
+
+-.
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>161</x><y>385</y><w>168</w><h>28</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
+moveToTermsAndConditions()</panel_attributes><additional_attributes>220;20;10;20</additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>315</x><y>392</y><w>14</w><h>35</h></coordinates><panel_attributes></panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>161</x><y>490</y><w>448</w><h>28</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
+update(customer)</panel_attributes><additional_attributes>620;20;10;20</additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>707</x><y>518</y><w>14</w><h>35</h></coordinates><panel_attributes></panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>161</x><y>518</y><w>560</w><h>28</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
+update(customer)</panel_attributes><additional_attributes>780;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>161</x><y>560</y><w>168</w><h>28</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
+showSuccessfulUpdateMessage()</panel_attributes><additional_attributes>220;20;10;20</additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>315</x><y>560</y><w>14</w><h>35</h></coordinates><panel_attributes></panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>161</x><y>574</y><w>168</w><h>28</h></coordinates><panel_attributes>lt=&lt;.
+</panel_attributes><additional_attributes>10;20;220;20</additional_attributes></element><element><id>Relation</id><coordinates><x>0</x><y>595</y><w>168</w><h>28</h></coordinates><panel_attributes>lt=&lt;.
+</panel_attributes><additional_attributes>10;20;220;20</additional_attributes></element></diagram>

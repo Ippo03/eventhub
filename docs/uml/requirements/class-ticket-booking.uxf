@@ -1,0 +1,149 @@
+<diagram program="umletino" version="15.1"><zoom_level>8</zoom_level><help_text></help_text><element><id>UMLClass</id><coordinates><x>632</x><y>24</y><w>208</w><h>24</h></coordinates><panel_attributes>androidx.lifecycle.ViewModel</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>832</x><y>24</y><w>96</w><h>24</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;100;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>912</x><y>0</y><w>272</w><h>56</h></coordinates><panel_attributes>TicketBookingViewModel
+--
+--
++getPresenter() : TicketBookingPresenter {query}</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>920</x><y>840</y><w>344</w><h>104</h></coordinates><panel_attributes>&lt;&lt;interface&gt;&gt;
+PurchaseDAO
+--
+--
++delete(purchase : Purchase)
++findAll():List&lt;Purchase&gt; {query}
++save(purchase : Purchase)
++find(id : int) : Purchase {query}
++nextId() : int</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1072</x><y>640</y><w>136</w><h>72</h></coordinates><panel_attributes>lt=&lt;-
+-customerDAO
+m1=1</panel_attributes><additional_attributes>150;70;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1024</x><y>696</y><w>344</w><h>128</h></coordinates><panel_attributes>&lt;&lt;interface&gt;&gt;
+CustomerDAO
+--
+--
++delete(customer : Customer)
++findAll() : List&lt;Customer&gt; {query}
++save(customer : Customer)
++findByCredentials(email : String, password : String) : Customer {query}
++find(id : int) : Customer {query}
++nextId() : int
++update(customer : Customer)</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>712</x><y>640</y><w>168</w><h>104</h></coordinates><panel_attributes>lt=&lt;-
+-eventDAO
+m1=1</panel_attributes><additional_attributes>10;110;190;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>512</x><y>728</y><w>400</w><h>304</h></coordinates><panel_attributes>&lt;&lt;interface&gt;&gt;
+EventDAO
+--
+
+--
++delete(event : Event)
++findAll() : List&lt;Event&gt; {query}
++save(event : Event)
++find(id : int) : Event {query}
++nextId() : int
++update(organizer : Organizer)
++findByName(name : String) : Event {query}
++findByGenre(genres : ArrayList&lt;Genre) : Set&lt;Event&gt; {query}
++findByType(types : ArrayList&lt;EventType&gt;) : Set&lt;Event&gt; {query}
++findByDateRange(from : LocalDate,
+ to : LocalDate) : Set&lt;Event&gt;  {query}
++findByCustomerInterests(interests : 
+Set&lt;Interest&gt;) : Set&lt;Event&gt;  {query}
++findFeedWithMostTicketsSold() : ArrayList&lt;Event&gt; {query}
++findFeedWithMostEventCapacity() :  ArrayList&lt;Event&gt; {query}
++findFeedWithMostAvailableTickets(): ArrayList&lt;Event&gt; {query}
++sortEventsByCapacity(events : ArrayList&lt;Event&gt;) : ArrayList&lt;Event&gt;
++sortEventsByTicketsSold(events : ArrayList&lt;Event&gt;) : ArrayList&lt;Event&gt;
++sortEventsByRating(events : ArrayList&lt;Event&gt;) : ArrayList&lt;Event&gt;
++sortEventsByCloserDate(events : ArrayList&lt;Event&gt;) : ArrayList&lt;Event&gt;
++sortEventsByFartherDate(events : ArrayList&lt;Event&gt;) : ArrayList&lt;Event&gt;
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>928</x><y>640</y><w>104</w><h>216</h></coordinates><panel_attributes>lt=&lt;-
+-purchaseDAO
+m1=1</panel_attributes><additional_attributes>50;250;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1024</x><y>48</y><w>88</w><h>128</h></coordinates><panel_attributes>lt=&lt;-
+-presenter
+m1=1</panel_attributes><additional_attributes>50;140;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>216</x><y>40</y><w>336</w><h>152</h></coordinates><panel_attributes>&lt;&lt;interface&gt;&gt;
+TicketBookingView
+--
+--
++getAttachedEventId() : int {query}
++getSelectedCategory() : TicketCategory {query}
++getSelectedDiscount(): TicketDiscount {query}
++onChangeCategory():
++onChangeDiscount():
++showTickets():
++setTotalcost(totalCost : String):
++showPurchaseCompleteMessage():
++showPurchaseErrorMessage(title : String, message : String)
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>32</x><y>368</y><w>360</w><h>48</h></coordinates><panel_attributes>TicketBookingActivity
+--
+--
+#onCreate(savedInstanceState: Bundle)</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>280</x><y>184</y><w>32</w><h>200</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>20;10;10;230</additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>232</y><w>160</w><h>24</h></coordinates><panel_attributes>lw=2
+AppCombatActivity</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>96</x><y>248</y><w>96</w><h>136</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;100;150</additional_attributes></element><element><id>UMLClass</id><coordinates><x>784</x><y>160</y><w>480</w><h>488</h></coordinates><panel_attributes>TicketBookingPresenter
+--
+-view : TicketBookingView
+-organizerDAO : OrganizerDAO
+-customerDAO : CustomerDAO 
+-eventDAO : EventDAO
+-ticketCategoryDAO : TicketCategoryDAO
+-ticketDiscountDAO : TicketDiscountDAO
+-ticketDAO : TicketDAO
+-purchaseDAO : PurchaseDAO
+-attachedEvent : Event 
+-attachedCustomer : Customer 
++ ticketList : List&lt;Ticket&gt; 
++ ticketCountMap : Map&lt;TicketKey, Integer&gt;
++ aggregatedTicketList : List&lt;Ticket&gt;
+--
++getView() : TicketBookingView {query}
++setView( view : TicketBookingView)
++setEvent( eventId : Integer)
++getEvent() : Event {query}
++setCustomer( customerId : Integer)
++getCustomer() : Customer {query}
++setTicketList( tickeList : List&lt;Ticket&gt;)
++getTicketList() : List&lt;Ticket&gt; {query}
++setTicketCountMap( ticketCountMap : Map&lt;TicketKey, Integer&gt;)
++getTicketCountMap() : Map&lt;TicketKey, Integer&gt; {query}
++setAggregatedTicketList( aggregatedTicketList : List&lt;Ticket&gt;)
++getAggregatedTicketList() : List&lt;Ticket&gt; {query}
++getTicketCategories() : String[]
++getTicketDiscounts() : String[]
++getTicketCategoryById( categoryId : Integer)
++getTicketDiscountById( discountId : Integer)
++updateTickePrice()
++updateTotalCost()
++onCreateTicket()
++onAddTicket( ticket :Ticket)
++onRemoveTicket( ticket : Ticket)
++onRefreshTicketCount(newTicket : Ticket, isAdd : boolean)
++onShowTickets()
++onCompletePurchase()
++onStartListener()
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>384</x><y>48</y><w>560</w><h>376</h></coordinates><panel_attributes>lt=&lt;-
+-viewModel
+m1=1</panel_attributes><additional_attributes>680;10;10;450</additional_attributes></element><element><id>UMLClass</id><coordinates><x>128</x><y>552</y><w>120</w><h>40</h></coordinates><panel_attributes>&lt;&lt;layout&gt;&gt;
+activity_ticket_booking</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>184</x><y>408</y><w>24</w><h>160</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>10;180;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>488</x><y>584</y><w>264</w><h>104</h></coordinates><panel_attributes>&lt;&lt;interface&gt;&gt;
+TicketDAO
+--
+--
++delete(ticket: Ticket)
++findAll():List&lt;Ticket&gt; {query}
++save(ticket: Ticket)
++find(id : int) : Ticket{query}
++nextId() : int</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>640</x><y>552</y><w>160</w><h>48</h></coordinates><panel_attributes>lt=&lt;-
+-ticketDAO
+m1=1</panel_attributes><additional_attributes>10;40;180;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1392</x><y>688</y><w>344</w><h>120</h></coordinates><panel_attributes>&lt;&lt;interface&gt;&gt;
+TicketCategoryDAO
+--
+--
++delete(ticketCategory : TicketCategory)
++findAll():List&lt;TicketCategory&gt; {query}
++save(ticketCategory : TicketCategory)
++update(ticketCategory : TicketCategory)
++find(id : int) : TicketCategory {query}
++nextId() : int</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1256</x><y>624</y><w>208</w><h>80</h></coordinates><panel_attributes>lt=&lt;-
+-ticketCategoryDAO
+m1=1</panel_attributes><additional_attributes>240;80;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1384</x><y>512</y><w>344</w><h>120</h></coordinates><panel_attributes>&lt;&lt;interface&gt;&gt;
+TicketDiscountDAO
+--
+--
++delete(ticketDiscount : TicketDiscount)
++findAll():List&lt;TicketDiscount&gt; {query}
++save(ticketDiscount : TicketDiscount)
++update(ticketDiscount : TicketDiscount)
++find(id : int) : TicketDiscount{query}
++nextId() : int</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1256</x><y>552</y><w>144</w><h>40</h></coordinates><panel_attributes>lt=&lt;-
+-ticketDiscountDAO
+m1=1</panel_attributes><additional_attributes>160;20;10;30</additional_attributes></element><element><id>Relation</id><coordinates><x>1256</x><y>256</y><w>120</w><h>24</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>130;10;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1360</x><y>248</y><w>80</w><h>24</h></coordinates><panel_attributes>Event</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1360</x><y>296</y><w>80</w><h>24</h></coordinates><panel_attributes>Customer</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1256</x><y>304</y><w>120</w><h>24</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>130;10;10;10</additional_attributes></element></diagram>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/textPurchasedTicketCategoryName"
+        android:layout_width="90dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="5dp"
+        android:hint="Category Name"
+        app:layout_constraintEnd_toStartOf="@+id/textPurchasedTicketCategoryCost"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textPurchasedTicketDiscountType"
+        android:layout_width="110dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="4dp"
+        android:hint="Discount Type"
+        app:layout_constraintBottom_toBottomOf="@+id/textPurchasedTicketCategoryCost"
+        app:layout_constraintEnd_toStartOf="@+id/textPurchasedTicketDiscountPercentage"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textPurchasedTicketCategoryCost"
+        app:layout_constraintTop_toTopOf="@+id/textPurchasedTicketCategoryCost" />
+
+    <TextView
+        android:id="@+id/textPurchasedTicketCategoryCost"
+        android:layout_width="65dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="4dp"
+        android:hint="Category Cost"
+        app:layout_constraintBottom_toBottomOf="@+id/textPurchasedTicketCategoryName"
+        app:layout_constraintEnd_toStartOf="@+id/textPurchasedTicketDiscountType"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textPurchasedTicketCategoryName"
+        app:layout_constraintTop_toTopOf="@+id/textPurchasedTicketCategoryName" />
+
+    <TextView
+        android:id="@+id/textPurchasedTicketDiscountPercentage"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="2dp"
+        android:hint="Discount Percentage"
+        app:layout_constraintBottom_toBottomOf="@+id/textPurchasedTicketDiscountType"
+        app:layout_constraintEnd_toStartOf="@+id/textPurchasedTicketPrice"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textPurchasedTicketDiscountType"
+        app:layout_constraintTop_toTopOf="@+id/textPurchasedTicketDiscountType" />
+
+    <TextView
+        android:id="@+id/textPurchasedTicketPrice"
+        android:layout_width="65dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="5dp"
+        android:hint="Price"
+        app:layout_constraintBottom_toBottomOf="@+id/textPurchasedTicketDiscountPercentage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textPurchasedTicketDiscountPercentage"
+        app:layout_constraintTop_toTopOf="@+id/textPurchasedTicketDiscountPercentage" />
+</androidx.constraintlayout.widget.ConstraintLayout>

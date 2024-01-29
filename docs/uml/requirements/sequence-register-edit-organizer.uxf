@@ -1,0 +1,39 @@
+<diagram program="umletino" version="15.1"><zoom_level>8</zoom_level><element><id>Relation</id><coordinates><x>176</x><y>68</y><w>24</w><h>744</h></coordinates><panel_attributes>lt=.</panel_attributes><additional_attributes>10;10;10;910</additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>112</x><y>36</y><w>152</w><h>40</h></coordinates><panel_attributes>_:RegisterEdtOrganizerPresenter_</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>304</x><y>36</y><w>128</w><h>40</h></coordinates><panel_attributes>_:RegisterEditOrganizerView_</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>360</x><y>68</y><w>24</w><h>728</h></coordinates><panel_attributes>lt=.</panel_attributes><additional_attributes>10;10;10;890</additional_attributes></element><element><id>Relation</id><coordinates><x>40</x><y>84</y><w>152</w><h>32</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
+onSaveOrganizer()</panel_attributes><additional_attributes>170;20;10;20</additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>176</x><y>100</y><w>16</w><h>664</h></coordinates><panel_attributes></panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>544</x><y>68</y><w>24</w><h>728</h></coordinates><panel_attributes>lt=.</panel_attributes><additional_attributes>10;10;10;890</additional_attributes></element><element><id>Relation</id><coordinates><x>800</x><y>68</y><w>32</w><h>712</h></coordinates><panel_attributes>lt=.</panel_attributes><additional_attributes>10;10;20;870</additional_attributes></element><element><id>Relation</id><coordinates><x>184</x><y>124</y><w>192</w><h>32</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
+getOrganizerInfo()</panel_attributes><additional_attributes>220;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>184</x><y>164</y><w>192</w><h>32</h></coordinates><panel_attributes>lt=&lt;.
+info</panel_attributes><additional_attributes>10;20;220;20</additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>360</x><y>140</y><w>16</w><h>40</h></coordinates><panel_attributes></panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLFrame</id><coordinates><x>72</x><y>220</y><w>784</w><h>528</h></coordinates><panel_attributes>alt
+--
+[empty info || invalid info]
+
+
+
+
+
+
+
+
+
+
+-.
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>760</x><y>36</y><w>96</w><h>40</h></coordinates><panel_attributes>_:UserDAO_</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>488</x><y>36</y><w>128</w><h>40</h></coordinates><panel_attributes>_organizer : Organizer_</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>184</x><y>260</y><w>192</w><h>32</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
+ShowErrorMessage(title,msg)</panel_attributes><additional_attributes>220;20;10;20</additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>632</x><y>36</y><w>104</w><h>40</h></coordinates><panel_attributes>_:OrganizerDAO_</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>680</x><y>68</y><w>24</w><h>728</h></coordinates><panel_attributes>lt=.</panel_attributes><additional_attributes>10;10;10;890</additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>680</x><y>556</y><w>16</w><h>40</h></coordinates><panel_attributes></panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>184</x><y>516</y><w>376</w><h>32</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
+setOrganizerInfo(organizerInfo)</panel_attributes><additional_attributes>450;20;10;20</additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>544</x><y>516</y><w>16</w><h>40</h></coordinates><panel_attributes></panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>0</x><y>324</y><w>192</w><h>32</h></coordinates><panel_attributes>lt=&lt;.
+</panel_attributes><additional_attributes>10;20;220;20</additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>360</x><y>276</y><w>16</w><h>48</h></coordinates><panel_attributes></panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>184</x><y>308</y><w>192</w><h>32</h></coordinates><panel_attributes>lt=&lt;.
+</panel_attributes><additional_attributes>10;20;220;20</additional_attributes></element><element><id>UMLFrame</id><coordinates><x>120</x><y>388</y><w>720</w><h>320</h></coordinates><panel_attributes>alt
+--
+[organizer == null]
+
+
+
+
+
+
+-.
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>184</x><y>436</y><w>192</w><h>32</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
+moveToTermsAndConditions()</panel_attributes><additional_attributes>220;20;10;20</additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>360</x><y>444</y><w>16</w><h>40</h></coordinates><panel_attributes></panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>184</x><y>556</y><w>512</w><h>32</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
+update(organizer)</panel_attributes><additional_attributes>620;20;10;20</additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>808</x><y>588</y><w>16</w><h>40</h></coordinates><panel_attributes></panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>184</x><y>588</y><w>640</w><h>32</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
+update(organizer)</panel_attributes><additional_attributes>780;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>184</x><y>636</y><w>192</w><h>32</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
+showSuccessfulUpdateMessage()</panel_attributes><additional_attributes>220;20;10;20</additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>360</x><y>636</y><w>16</w><h>40</h></coordinates><panel_attributes></panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>184</x><y>652</y><w>192</w><h>32</h></coordinates><panel_attributes>lt=&lt;.
+</panel_attributes><additional_attributes>10;20;220;20</additional_attributes></element><element><id>Relation</id><coordinates><x>0</x><y>676</y><w>192</w><h>32</h></coordinates><panel_attributes>lt=&lt;.
+</panel_attributes><additional_attributes>10;20;220;20</additional_attributes></element></diagram>

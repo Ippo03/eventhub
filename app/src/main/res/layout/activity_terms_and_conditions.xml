@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:contextClickable="true"
+    android:visibility="visible"
+    tools:context=".view.Account.Register.TermsAndConditions.TermsAndConditionsActivity">
+
+    <Button
+        android:id="@+id/buttonFinishRegistration"
+        android:layout_width="98dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="140dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="140dp"
+        android:layout_marginBottom="36dp"
+        android:text="Finish"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.484"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radio_group" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="380dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="15dp"
+        android:text="Accept our terms and conditions to finish setting up your account."
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="386dp"
+        android:layout_height="445dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="9dp"
+        android:text="
+- Users must create an account with accurate, current information.\n
+- Users are responsible for maintaining the confidentiality of their account and password.\n
+- Event organizers are responsible for the accuracy of their event listings.\n
+- Eventhub is not liable for any inaccuracies in event information.\n
+- Cancellation and refund policies are set by the event organizers.\n
+- Eventhub is not responsible for issuing refunds.\n
+- Transactions for event tickets are between the user and the event organizer. Eventhub is not a party to these transactions.\n
+- Users must not use the app to harass, abuse, or harm other people.\n
+- Posting illegal, offensive, or inappropriate content is strictly prohibited.\n
+- The app may not be used for any unlawful purposes.\n
+- All content on the app, including text, graphics, logos, and images, is the property of Eventhub or its content suppliers and protected by copyright and intellectual property laws.\n
+- Eventhub reserves the right to terminate user accounts and restrict access to the app for any reason.\n
+- These terms shall be governed by and construed in accordance with the laws of the country where Eventhub is based."
+        android:textAlignment="viewStart"
+        android:textSize="14sp"
+        android:typeface="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="395dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="3dp"
+        android:text="For any questions or concerns regarding these terms, users may contact Eventhub via e-mail at support@eventhub.com"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="391dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="5dp"
+        android:text="These terms are subject to change without prior notice, and continued use of the app constitutes acceptance of the changes."
+        android:textAlignment="center"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="114dp"
+        android:layout_height="77dp"
+        android:layout_marginStart="137dp"
+        android:layout_marginTop="37dp"
+        android:layout_marginEnd="157dp"
+        android:layout_marginBottom="800dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/eventhub_logo_2_no" />
+
+    <RadioGroup
+        android:id="@+id/radio_group"
+        android:layout_width="200dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="10dp"
+        android:checkedButton="@+id/checkBoxAgree"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/buttonFinishRegistration"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView13">
+
+        <RadioButton
+            android:id="@+id/checkBoxAgree"
+            android:layout_width="95dp"
+            android:layout_height="match_parent"
+            android:button="?android:attr/listChoiceIndicatorMultiple"
+            android:text="@string/agree" />
+
+        <RadioButton
+            android:id="@+id/checkBoxDisagree"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:button="?android:attr/listChoiceIndicatorMultiple"
+            android:text="@string/don_t_agree"
+            tools:layout_editor_absoluteX="120dp"
+            tools:layout_editor_absoluteY="856dp" />
+    </RadioGroup>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

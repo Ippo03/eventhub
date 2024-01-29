@@ -1,0 +1,90 @@
+<diagram program="umletino" version="15.1"><zoom_level>5</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>145</x><y>122</y><w>120</w><h>75</h></coordinates><panel_attributes>&lt;&lt;interface&gt;&gt;
+OrganizerHomePageView
+--
+
+--
++showEmptyEvents() 
++showOrganizedEvents()
++createEvent() 
++editAccount()
++logout()
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>120</x><y>267</y><w>195</w><h>50</h></coordinates><panel_attributes>OrganizerHomePageActivity
+--
++organizedId : Integer
+emptyEvents :TextView
+recyclerView : RecyckerView
+--
+#onCreate(SavedInstanceState : Bundle)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>445</x><y>187</y><w>185</w><h>125</h></coordinates><panel_attributes>OrganizerHomePagePresenter
+--
+-organizedEvents : ArrayList&lt;Event&gt;
+-organizer : Organizer
+--
++setView(view : OrganizerHomePageView)
++getView() : OrganizerHomePageView
++getOrganizerDao() : OrganizerDAO
++getEventDao() : EventDAO
++setOrganizer(organizer : Organizer)
++getOrganizer() : Orgaizer
++setOrganizedEventList()
++getOrganizedEventList() : ArrayList&lt;Event&gt;
++onDisplayEvents()
++onCreateEvent()
++onEditAccount()
++onLogout()
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>335</x><y>82</y><w>140</w><h>45</h></coordinates><panel_attributes>OrganizerHomePageViewModel
+--
+
+--
++getPresenter() : OrganizerHomePagePresenter</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>65</x><y>377</y><w>130</w><h>30</h></coordinates><panel_attributes>&lt;&lt;interface&gt;&gt;
+ItemSelectionListener
+--
++selectEvent(event : Event)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>245</x><y>387</y><w>100</w><h>20</h></coordinates><panel_attributes>&lt;&lt;layout&gt;&gt;
+activity_organizer_home_page</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>200</x><y>192</y><w>25</w><h>85</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;30;150</additional_attributes></element><element><id>Relation</id><coordinates><x>125</x><y>312</y><w>80</w><h>75</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;130;140;10</additional_attributes></element><element><id>Relation</id><coordinates><x>255</x><y>312</y><w>50</w><h>85</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>80;150;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>287</y><w>75</w><h>15</h></coordinates><panel_attributes>AppCompatActivity</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>70</x><y>292</y><w>60</w><h>15</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;100;10</additional_attributes></element><element><id>Relation</id><coordinates><x>300</x><y>122</y><w>90</w><h>155</h></coordinates><panel_attributes>lt=&lt;-
+-viewModel
+m1=1</panel_attributes><additional_attributes>160;10;10;290</additional_attributes></element><element><id>UMLClass</id><coordinates><x>360</x><y>27</y><w>100</w><h>15</h></coordinates><panel_attributes>androidx.lifecycle.ViewModel</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>400</x><y>37</y><w>15</w><h>55</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;90</additional_attributes></element><element><id>Relation</id><coordinates><x>470</x><y>122</y><w>70</w><h>75</h></coordinates><panel_attributes>lt=&lt;-
+-presenter
+m1=1</panel_attributes><additional_attributes>120;130;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>385</x><y>352</y><w>125</w><h>95</h></coordinates><panel_attributes>&lt;&lt;interface&gt;&gt;
+OrganizerDAO
+--
+
+--
++delete(organizer : Organizer)
++findAll() : List&lt;Organizer&gt;
++save(organizer : Organizer)
++find(id : int) : Organizer
++nextId() : int
++findByCredentials(email : String,
+ password : String) : Organizer
++update(organizer : Organizer)
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>450</x><y>307</y><w>60</w><h>55</h></coordinates><panel_attributes>lt=&lt;-
+-organizerDAO
+m1=1</panel_attributes><additional_attributes>10;90;100;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>530</x><y>342</y><w>205</w><h>190</h></coordinates><panel_attributes>&lt;&lt;interface&gt;&gt;
+EventDAO
+--
+
+--
++delete(event : Event)
++findAll() : List&lt;Event&gt; {query}
++save(event : Event)
++find(id : int) : Event {query}
++nextId() : int
++update(organizer : Organizer)
++findByName(name : String) : Event {query}
++findByGenre(genres : ArrayList&lt;Genre) : Set&lt;Event&gt; {query}
++findByType(types : ArrayList&lt;EventType&gt;) : Set&lt;Event&gt; {query}
++findByDateRange(from : LocalDate,
+ to : LocalDate) : Set&lt;Event&gt;  {query}
++findByCustomerInterests(interests : 
+Set&lt;Interest&gt;) : Set&lt;Event&gt;  {query}
++findFeedWithMostTicketsSold() : ArrayList&lt;Event&gt; {query}
++findFeedWithMostEventCapacity() :  ArrayList&lt;Event&gt; {query}
++findFeedWithMostAvailableTickets(): ArrayList&lt;Event&gt; {query}
++sortEventsByCapacity(events : ArrayList&lt;Event&gt;) : ArrayList&lt;Event&gt;
++sortEventsByTicketsSold(events : ArrayList&lt;Event&gt;) : ArrayList&lt;Event&gt;
++sortEventsByRating(events : ArrayList&lt;Event&gt;) : ArrayList&lt;Event&gt;
++sortEventsByCloserDate(events : ArrayList&lt;Event&gt;) : ArrayList&lt;Event&gt;
++sortEventsByFartherDate(events : ArrayList&lt;Event&gt;) : ArrayList&lt;Event&gt;
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>585</x><y>307</y><w>60</w><h>45</h></coordinates><panel_attributes>lt=&lt;-
+-eventDAO
+m1=1</panel_attributes><additional_attributes>70;70;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>705</x><y>262</y><w>50</w><h>15</h></coordinates><panel_attributes>Event</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>625</x><y>267</y><w>90</w><h>15</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>160;10;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>705</x><y>222</y><w>55</w><h>15</h></coordinates><panel_attributes>Organizer</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>625</x><y>222</y><w>90</w><h>15</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>160;10;10;10</additional_attributes></element></diagram>

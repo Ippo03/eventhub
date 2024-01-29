@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.Event.TicketCategorySelection.TicketCategorySelectionActivity">
+
+    <EditText
+        android:id="@+id/textInputCategoryDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="Description"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="@+id/textInputCategeryName"
+        app:layout_constraintStart_toStartOf="@+id/textInputCategeryName"
+        app:layout_constraintTop_toBottomOf="@+id/textInputCategeryName" />
+
+    <EditText
+        android:id="@+id/textInputCategoryQuantity"
+        android:layout_width="100dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="Quantity"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textInputCategeryName"
+        app:layout_constraintTop_toBottomOf="@+id/titleTicketCategoryInsertion" />
+
+    <TextView
+        android:id="@+id/textViewTotalCapacity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:text="Total Capacity"
+        android:textAlignment="textStart"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/textEventTotalCapacity"
+        android:layout_width="371dp"
+        android:layout_height="48dp"
+        android:ems="10"
+        android:hint="1000"
+        android:inputType="text"
+        android:textColor="#000000"
+        app:layout_constraintStart_toStartOf="@+id/textViewTotalCapacity"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTotalCapacity" />
+
+    <TextView
+        android:id="@+id/titleTicketCategoryInsertion"
+        android:layout_width="wrap_content"
+        android:layout_height="28dp"
+        android:layout_marginTop="48dp"
+        android:text="Insert New Ticket Category"
+        android:textAlignment="textStart"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textEventTotalCapacity" />
+
+    <EditText
+        android:id="@+id/textInputCategeryName"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="Name"
+        android:inputType="text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleTicketCategoryInsertion" />
+
+    <EditText
+        android:id="@+id/textInputCategoryPrice"
+        android:layout_width="100dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="Price"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textInputCategoryDescription"
+        app:layout_constraintTop_toBottomOf="@+id/textInputCategoryQuantity" />
+
+    <Button
+        android:id="@+id/buttonAddTicketCategory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="#00CC00"
+        android:text="ADD"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputCategoryPrice"
+        app:layout_constraintVertical_bias="0.03" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerAddedTicketCategories"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonAddTicketCategory"
+        app:layout_constraintVertical_bias="0.183" />
+
+    <Button
+        android:id="@+id/buttonNextToTicketDiscountSelection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="24dp"
+        android:text="Next"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputCategoryPrice" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

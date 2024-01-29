@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.Customer.CustomerHomePage.CustomerHomePageActivity">
+
+    <Spinner
+        android:id="@+id/spinnerCustomerSorting"
+        android:layout_width="360dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="414dp"
+        android:clickable="false"
+        android:contextClickable="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textView44" />
+
+    <ImageButton
+        android:id="@+id/buttonCustomerOpenSortingDialog"
+        android:layout_width="43dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginBottom="414dp"
+        android:src="@drawable/baseline_analytics_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/textView44"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="429dp"
+        android:layout_marginBottom="464dp"
+        android:text="@string/select_sorting"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible" />
+
+    <CheckBox
+        android:id="@+id/checkBoxCustomerOpen"
+        android:layout_width="112dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="25dp"
+        android:clickable="true"
+        android:text="Open"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:checkedState="unchecked"
+        app:layout_constraintStart_toStartOf="@+id/textInputCustomerEventFromDate"
+        app:layout_constraintTop_toBottomOf="@+id/textInputCustomerEventFromDate" />
+
+    <CheckBox
+        android:id="@+id/checkBoxCustomerClosed"
+        android:layout_width="112dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="25dp"
+        android:clickable="true"
+        android:text="Closed"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/checkBoxCustomerFree"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/checkBoxCustomerOpen"
+        app:layout_constraintTop_toBottomOf="@+id/textInputCustomerEventToDate" />
+
+    <CheckBox
+        android:id="@+id/checkBoxCustomerFree"
+        android:layout_width="112dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="25dp"
+        android:checked="false"
+        android:clickable="true"
+        android:text="Free"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:centerIfNoTextEnabled="false"
+        app:checkedState="unchecked"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/checkBoxCustomerClosed"
+        app:layout_constraintTop_toBottomOf="@+id/textInputCustomerEventToDate" />
+
+    <EditText
+        android:id="@+id/textInputCustomerEventToDate"
+        android:layout_width="165dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="4dp"
+        android:ems="10"
+        android:hint="To: 12/06/2023"
+        android:inputType="date"
+        app:layout_constraintEnd_toEndOf="@+id/checkBoxCustomerFree"
+        app:layout_constraintTop_toBottomOf="@+id/multiSpinnerCustomerGenres" />
+
+    <EditText
+        android:id="@+id/textInputCustomerEventFromDate"
+        android:layout_width="162dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="21dp"
+        android:ems="10"
+        android:hint="From: 01/03/2020"
+        android:inputType="date"
+        app:layout_constraintStart_toStartOf="@+id/textInputCustomerEventName"
+        app:layout_constraintTop_toBottomOf="@+id/textInputCustomerEventName" />
+
+    <EditText
+        android:id="@+id/textInputCustomerEventName"
+        android:layout_width="193dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="Type Event Name"
+        android:inputType="text"
+        app:layout_constraintEnd_toStartOf="@+id/multiSpinnerCustomerGenres"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView7" />
+
+    <com.example.eventhub.view.Util.MultiSpinner
+        android:id="@+id/multiSpinnerCustomerGenres"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="220dp"
+        android:entries="@array/genres"
+        android:icon="@drawable/baseline_category_24"
+        android:textAlignment="textStart"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="@+id/textInputCustomerEventToDate"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView47"
+        android:layout_width="103dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="200dp"
+        android:layout_marginEnd="68dp"
+        android:layout_marginBottom="7dp"
+        android:text="@string/select_genre"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/multiSpinnerGenres"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible" />
+
+    <Button
+        android:id="@+id/buttonCustomerSearchEvent"
+        android:layout_width="155dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="159dp"
+        android:layout_marginEnd="159dp"
+        android:layout_marginBottom="336dp"
+        android:elegantTextHeight="true"
+        android:gravity="center_horizontal"
+        android:text="Search"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:icon="@android:drawable/ic_menu_search"
+        app:iconTint="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/buttonCustomerResetFilters"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="336dp"
+        android:text="Reset filters"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.764"
+        app:layout_constraintStart_toEndOf="@+id/buttonCustomerSearchEvent" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="187dp"
+        android:layout_height="181dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/eventhub_logo_2_no" />
+
+    <Button
+        android:id="@+id/buttonCustomerLogout1"
+        android:layout_width="160dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="36dp"
+        android:text="LOG OUT"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView7"
+        app:layout_constraintTop_toBottomOf="@+id/buttonCustomerEditAccount1" />
+
+    <Button
+        android:id="@+id/buttonCustomerEditAccount1"
+        android:layout_width="160dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="36dp"
+        android:text="Edit Account"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView7"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonCustomerPurchases1"
+        android:layout_width="160dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="36dp"
+        android:text="Purchases"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.529"
+        app:layout_constraintStart_toEndOf="@+id/imageView7"
+        app:layout_constraintTop_toBottomOf="@+id/buttonCustomerLogout1" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/eventFeedCustomer"
+        android:layout_width="398dp"
+        android:layout_height="304dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

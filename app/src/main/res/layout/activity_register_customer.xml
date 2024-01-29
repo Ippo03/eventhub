@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.Account.Register.RegisterEditCustomer.RegisterEditCustomerActivity">
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="172dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="51dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="32dp"
+        android:text="Already have an account ?"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/linkCustomerLogin"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonCustomerRegister" />
+
+    <Button
+        android:id="@+id/buttonCustomerRegister"
+        android:layout_width="157dp"
+        android:layout_height="63dp"
+        android:layout_marginStart="122dp"
+        android:layout_marginTop="58dp"
+        android:layout_marginEnd="135dp"
+        android:text="Register"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/multiSpinnerCustomerInterests" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="165dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="20dp"
+        android:text="Enter your first name:"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="111dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="17dp"
+        android:text="Enter your age:"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroupCustomerGender" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="146dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="12dp"
+        android:text="Enter your e-mail:"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/textInputCustomerEmail"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputCustomerStreet" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="158dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="12dp"
+        android:text="Enter your password:"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/textInputCustomerPassword"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="165dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="11dp"
+        android:text="Enter your last name:"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/textInputCustomerLastName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <EditText
+        android:id="@+id/textInputCustomerEmail"
+        android:layout_width="220dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="472dp"
+        android:layout_marginEnd="12dp"
+        android:ems="10"
+        android:hint="example@aueb.gr"
+        android:inputType="textEmailAddress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/textInputCustomerPassword"
+        android:layout_width="220dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="12dp"
+        android:ems="10"
+        android:hint="password123!"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputCustomerEmail" />
+
+    <EditText
+        android:id="@+id/textInputCustomerFirstName"
+        android:layout_width="206dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="89dp"
+        android:layout_marginEnd="14dp"
+        android:ems="10"
+        android:hint="John"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/textInputCustomerLastName"
+        android:layout_width="206dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="149dp"
+        android:layout_marginEnd="14dp"
+        android:ems="10"
+        android:hint="Doe"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/textInputCustomerCity"
+        android:layout_width="85dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="13dp"
+        android:ems="10"
+        android:hint="City"
+        android:inputType="text"
+        app:layout_constraintEnd_toStartOf="@+id/textInputCustomerZipCode"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textInputCustomerStreetNumber"
+        app:layout_constraintTop_toBottomOf="@+id/textView16" />
+
+    <EditText
+        android:id="@+id/textInputCustomerStreetNumber"
+        android:layout_width="85dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:ems="10"
+        android:hint="Str. No"
+        android:inputType="textPostalAddress"
+        app:layout_constraintEnd_toStartOf="@+id/textInputCustomerCity"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textInputCustomerStreet"
+        app:layout_constraintTop_toBottomOf="@+id/textView16" />
+
+    <EditText
+        android:id="@+id/textInputCustomerStreet"
+        android:layout_width="85dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:ems="10"
+        android:hint="Street"
+        app:layout_constraintEnd_toStartOf="@+id/textInputCustomerStreetNumber"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView16" />
+
+    <EditText
+        android:id="@+id/textInputCustomerAge"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="307dp"
+        android:layout_marginEnd="200dp"
+        android:ems="10"
+        android:hint="18+"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/textView5"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/linkCustomerLogin"
+        android:layout_width="121dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="56dp"
+        android:clickable="true"
+        android:contextClickable="true"
+        android:text="Login Now !"
+        android:textAlignment="center"
+        android:textColor="#03A9F4"
+        android:textSize="16sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="@+id/textView12"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView12"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/titleCustomerSignUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="27dp"
+        android:layout_marginEnd="69dp"
+        android:text="Sign Up as Customer"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="165dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="231dp"
+        android:text="Check your Gender:"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="195dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="201dp"
+        android:text="Enter your address details:"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="82dp"
+        android:layout_height="69dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/eventhub_only_logo" />
+
+    <EditText
+        android:id="@+id/textInputCustomerZipCode"
+        android:layout_width="85dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="16dp"
+        android:ems="10"
+        android:hint="ZipCode"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textInputCustomerCity"
+        app:layout_constraintTop_toBottomOf="@+id/textView16" />
+
+    <RadioGroup
+        android:id="@+id/radioGroupCustomerGender"
+        android:layout_width="200dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView15">
+
+        <RadioButton
+            android:id="@+id/checkBoxCustomerMale"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:text="@string/Male"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/checkBoxCustomerFemale"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:text="@string/Female"
+            android:textSize="16sp" />
+    </RadioGroup>
+
+    <com.example.eventhub.view.Util.MultiSpinner
+        android:id="@+id/multiSpinnerCustomerInterests"
+        android:layout_width="351dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="37dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView24" />
+
+    <TextView
+        android:id="@+id/textView24"
+        android:layout_width="169dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="222dp"
+        android:text="Enter your interests"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputCustomerPassword" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

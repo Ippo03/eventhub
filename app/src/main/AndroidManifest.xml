@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/icon_eventhub"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/icon_eventhub"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.EventHub"
+        tools:targetApi="31">
+        <activity
+            android:name=".view.Customer.PurchaseDetails.PurchaseDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.Event.CreateEventOverview.CreateEventOverviewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.Event.TicketDiscountSelection.TicketDiscountSelectionActivity"
+            android:windowSoftInputMode="adjustPan"
+            android:exported="false" />
+        <activity
+            android:name=".view.Event.TicketCategorySelection.TicketCategorySelectionActivity"
+            android:windowSoftInputMode="adjustPan"
+            android:exported="false" />
+        <activity
+            android:name=".view.Account.Register.ChooseRegistration.ChooseRegistrationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.ReviewEvent.ReviewEventActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".view.Customer.CustomerPurchases.CustomerPurchasesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.TicketBooking.TicketBookingActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".view.Event.CreateEditEvent.CreateEditEventActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".view.Event.EventDetails.EventDetailsActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".view.OrganizerHomePage.OrganizerHomePageActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".view.HomePage.HomePageActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".view.Account.Register.TermsAndConditions.TermsAndConditionsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.Account.Login.LoginActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".view.Account.Register.RegisterEditOrganizer.RegisterEditOrganizerActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".view.Account.Register.RegisterEditCustomer.RegisterEditCustomerActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan" />
+    </application>
+
+</manifest>

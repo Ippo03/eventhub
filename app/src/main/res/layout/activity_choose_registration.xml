@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.Account.Register.ChooseRegistration.ChooseRegistrationActivity">
+
+    <Button
+        android:id="@+id/buttonRegisterCust"
+        android:layout_width="120dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="120dp"
+        android:text="Customer"
+        android:visibility="visible"
+        app:layout_constraintEnd_toStartOf="@+id/buttonRegisterOrg"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+
+    <Button
+        android:id="@+id/buttonRegisterOrg"
+        android:layout_width="120dp"
+        android:layout_height="65dp"
+        android:text="ORGANIZER"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonRegisterCust"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/buttonRegisterCust"
+        app:layout_constraintTop_toTopOf="@+id/buttonRegisterCust" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="216dp"
+        android:layout_height="191dp"
+        android:layout_marginStart="131dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="138dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.642"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/eventhub_logo_2_no" />
+
+    <TextView
+        android:id="@+id/textView19"
+        android:layout_width="191dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="110dp"
+        android:layout_marginEnd="110dp"
+        android:text="Welcome to EventHub !"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textView20"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView5"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <TextView
+        android:id="@+id/textView20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="You are going to register as:"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonRegisterCust"
+        app:layout_constraintStart_toStartOf="@+id/textView19"
+        app:layout_constraintTop_toBottomOf="@+id/textView19"
+        app:layout_constraintVertical_bias="0.5" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

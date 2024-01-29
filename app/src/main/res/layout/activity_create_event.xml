@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textViewTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Time"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/spinnerNewEventGenre"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerNewEventGenre" />
+
+    <TextView
+        android:id="@+id/textViewAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:layout_marginTop="40dp"
+        android:text="Address"
+        android:textAlignment="textStart"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/textViewTitle"
+        app:layout_constraintTop_toBottomOf="@+id/textInputNewEventName" />
+
+    <EditText
+        android:id="@+id/textInputNewEventAddress"
+        android:layout_width="371dp"
+        android:layout_height="45dp"
+        android:ems="10"
+        android:hint="Psaron 17, Athens 18120"
+        android:inputType="text"
+        android:textColor="#000000"
+        app:layout_constraintStart_toStartOf="@+id/textViewAddress"
+        app:layout_constraintTop_toBottomOf="@+id/textViewAddress" />
+
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="28dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="40dp"
+        android:text="Title"
+        android:textAlignment="textStart"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/textInputNewEventName"
+        android:layout_width="371dp"
+        android:layout_height="45dp"
+        android:ems="10"
+        android:hint="Event Title"
+        android:inputType="text"
+        android:textColor="#000000"
+        app:layout_constraintStart_toStartOf="@+id/textViewTitle"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTitle" />
+
+    <TextView
+        android:id="@+id/textViewDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="188dp"
+        android:text="Date"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/textViewEventType"
+        app:layout_constraintTop_toBottomOf="@+id/textInputNewEventAddress" />
+
+    <EditText
+        android:id="@+id/textInputNewEventDate"
+        android:layout_width="183dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="5dp"
+        android:hint="01-01-2024"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textViewDate"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDate" />
+
+    <TextView
+        android:id="@+id/textViewEventType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="Event Type"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/textViewTitle"
+        app:layout_constraintTop_toBottomOf="@+id/textInputNewEventAddress" />
+
+    <RadioGroup
+        android:id="@+id/radioGroupNewEventType"
+        android:layout_width="91dp"
+        android:layout_height="127dp"
+        android:layout_marginTop="4dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="@+id/textViewEventType"
+        app:layout_constraintTop_toBottomOf="@+id/textViewEventType">
+
+        <RadioButton
+            android:id="@+id/checkBoxOpen"
+            android:layout_width="85dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Open"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewEventType" />
+
+        <RadioButton
+            android:id="@+id/checkBoxClosed"
+            android:layout_width="85dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Closed"
+            app:layout_constraintStart_toStartOf="@+id/checkBoxOpen"
+            app:layout_constraintTop_toBottomOf="@+id/checkBoxOpen" />
+
+        <RadioButton
+            android:id="@+id/checkBoxFree"
+            android:layout_width="85dp"
+            android:layout_height="34dp"
+            android:layout_marginTop="5dp"
+            android:text="Free"
+            app:layout_constraintStart_toStartOf="@+id/checkBoxOpen"
+            app:layout_constraintTop_toBottomOf="@+id/checkBoxClosed" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textView20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:text="Genre"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/textInputNewEventDate"
+        app:layout_constraintTop_toBottomOf="@+id/textInputNewEventDate" />
+
+    <Spinner
+        android:id="@+id/spinnerNewEventGenre"
+        android:layout_width="182dp"
+        android:layout_height="31dp"
+        android:layout_marginEnd="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textView20"
+        app:layout_constraintTop_toBottomOf="@+id/textView20" />
+
+    <Button
+        android:id="@+id/buttonNextToTicketCategorySelection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="160dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="163dp"
+        android:layout_marginBottom="212dp"
+        android:text="Next"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputNewEventTime" />
+
+    <EditText
+        android:id="@+id/textInputNewEventTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="19dp"
+        android:ems="10"
+        android:hint="20:00"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textViewTime"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTime" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

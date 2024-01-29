@@ -1,0 +1,54 @@
+<diagram program="umletino" version="15.1"><zoom_level>8</zoom_level><element><id>Relation</id><coordinates><x>176</x><y>32</y><w>24</w><h>808</h></coordinates><panel_attributes>lt=.</panel_attributes><additional_attributes>10;10;10;990</additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>112</x><y>0</y><w>152</w><h>40</h></coordinates><panel_attributes>_:TermsAndConditionsPresenter_</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>320</x><y>0</y><w>128</w><h>40</h></coordinates><panel_attributes>_:TermsAndConditionsView_</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>360</x><y>32</y><w>24</w><h>800</h></coordinates><panel_attributes>lt=.</panel_attributes><additional_attributes>10;10;10;980</additional_attributes></element><element><id>Relation</id><coordinates><x>40</x><y>56</y><w>152</w><h>32</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
+onRegister(info, type)</panel_attributes><additional_attributes>170;20;10;20</additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>176</x><y>64</y><w>16</w><h>744</h></coordinates><panel_attributes></panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>536</x><y>32</y><w>24</w><h>800</h></coordinates><panel_attributes>lt=.</panel_attributes><additional_attributes>10;10;10;980</additional_attributes></element><element><id>Relation</id><coordinates><x>184</x><y>88</y><w>192</w><h>32</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
+getAgreement()</panel_attributes><additional_attributes>220;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>184</x><y>128</y><w>192</w><h>32</h></coordinates><panel_attributes>lt=&lt;.
+agreement</panel_attributes><additional_attributes>10;20;220;20</additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>360</x><y>104</y><w>16</w><h>40</h></coordinates><panel_attributes></panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLFrame</id><coordinates><x>72</x><y>184</y><w>816</w><h>616</h></coordinates><panel_attributes>alt
+--
+[agreement == "Disagree"]
+
+
+
+
+
+
+
+
+
+
+-.
+[agreement = "Agree"]
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>496</x><y>8</y><w>96</w><h>32</h></coordinates><panel_attributes>_:OrganizerDAO_</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>184</x><y>224</y><w>192</w><h>32</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
+showErrorMessage(title,msg)</panel_attributes><additional_attributes>220;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>184</x><y>424</y><w>512</w><h>32</h></coordinates><panel_attributes>lt=&lt;.
+create()</panel_attributes><additional_attributes>620;20;10;20</additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>608</x><y>8</y><w>96</w><h>32</h></coordinates><panel_attributes>_:CustomerDAO_</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>648</x><y>32</y><w>24</w><h>808</h></coordinates><panel_attributes>lt=.</panel_attributes><additional_attributes>10;10;10;990</additional_attributes></element><element><id>Relation</id><coordinates><x>184</x><y>464</y><w>368</w><h>32</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
+save(organizer)</panel_attributes><additional_attributes>440;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>0</x><y>288</y><w>192</w><h>32</h></coordinates><panel_attributes>lt=&lt;.
+</panel_attributes><additional_attributes>10;20;220;20</additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>360</x><y>240</y><w>16</w><h>48</h></coordinates><panel_attributes></panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>184</x><y>272</y><w>192</w><h>32</h></coordinates><panel_attributes>lt=&lt;.
+</panel_attributes><additional_attributes>10;20;220;20</additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>784</x><y>8</y><w>96</w><h>32</h></coordinates><panel_attributes>_:UserDAO_</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>824</x><y>32</y><w>32</w><h>816</h></coordinates><panel_attributes>lt=.</panel_attributes><additional_attributes>10;10;20;1000</additional_attributes></element><element><id>UMLFrame</id><coordinates><x>112</x><y>384</y><w>760</w><h>360</h></coordinates><panel_attributes>alt
+--
+[type == "organizer"]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-.
+[type == "customer"]
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>680</x><y>424</y><w>120</w><h>32</h></coordinates><panel_attributes>_organizer : Organizer_</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>536</x><y>464</y><w>16</w><h>40</h></coordinates><panel_attributes></panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>184</x><y>504</y><w>656</w><h>32</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
+save(organizer)</panel_attributes><additional_attributes>800;20;10;20</additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>824</x><y>504</y><w>16</w><h>40</h></coordinates><panel_attributes></panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>360</x><y>528</y><w>16</w><h>40</h></coordinates><panel_attributes></panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>184</x><y>528</y><w>192</w><h>32</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
+showSuccessfulRegistrationMessage()</panel_attributes><additional_attributes>220;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>184</x><y>544</y><w>192</w><h>32</h></coordinates><panel_attributes>lt=&lt;.
+</panel_attributes><additional_attributes>10;20;220;20</additional_attributes></element><element><id>Relation</id><coordinates><x>0</x><y>560</y><w>192</w><h>32</h></coordinates><panel_attributes>lt=&lt;.
+</panel_attributes><additional_attributes>10;20;220;20</additional_attributes></element><element><id>Relation</id><coordinates><x>184</x><y>608</y><w>512</w><h>32</h></coordinates><panel_attributes>lt=&lt;.
+create()</panel_attributes><additional_attributes>620;20;10;20</additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>680</x><y>608</y><w>120</w><h>32</h></coordinates><panel_attributes>_customer : Customer_</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>184</x><y>640</y><w>480</w><h>32</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
+save(customer)</panel_attributes><additional_attributes>580;20;10;20</additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>648</x><y>648</y><w>16</w><h>32</h></coordinates><panel_attributes></panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>176</x><y>672</y><w>672</w><h>32</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
+save(customer)</panel_attributes><additional_attributes>820;20;10;20</additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>832</x><y>680</y><w>16</w><h>24</h></coordinates><panel_attributes></panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>184</x><y>688</y><w>192</w><h>32</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
+showSuccessfulRegistrationMessage()</panel_attributes><additional_attributes>220;20;10;20</additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>360</x><y>696</y><w>16</w><h>32</h></coordinates><panel_attributes></panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>184</x><y>704</y><w>192</w><h>32</h></coordinates><panel_attributes>lt=&lt;.
+</panel_attributes><additional_attributes>10;20;220;20</additional_attributes></element><element><id>Relation</id><coordinates><x>0</x><y>720</y><w>192</w><h>32</h></coordinates><panel_attributes>lt=&lt;.
+</panel_attributes><additional_attributes>10;20;220;20</additional_attributes></element></diagram>

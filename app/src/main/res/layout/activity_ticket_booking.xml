@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.TicketBooking.TicketBookingActivity">
+
+    <TextView
+        android:id="@+id/textPurchaseTotalCost"
+        android:layout_width="170dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="20dp"
+        android:text="Total Cost"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerTicketsSelected" />
+
+    <TextView
+        android:id="@+id/textView26"
+        android:layout_width="125dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="47dp"
+        android:text="Total Cost :"
+        app:layout_constraintBottom_toBottomOf="@+id/textPurchaseTotalCost"
+        app:layout_constraintEnd_toStartOf="@+id/textPurchaseTotalCost"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textPurchaseTotalCost"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/buttonCompletePurchase"
+        android:layout_width="155dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginBottom="16dp"
+        android:text="Purchase"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonAddTicket"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/buttonAddTicket"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerTicketsSelected"
+        android:layout_width="381dp"
+        android:layout_height="277dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="435dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="202dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView23"
+        android:layout_width="177dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="21dp"
+        android:text="Book your ticket for"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/textEventNameTicket"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textEventNameTicket"
+        android:layout_width="184dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:text="EVENT NAME"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView25"
+        android:layout_width="359dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="38dp"
+        android:layout_marginEnd="26dp"
+        android:text="Please select ticket category"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView23" />
+
+    <TextView
+        android:id="@+id/textView27"
+        android:layout_width="359dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="27dp"
+        android:layout_marginEnd="26dp"
+        android:text="Please select ticket discount"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/categorySpinner" />
+
+    <TextView
+        android:id="@+id/textView29"
+        android:layout_width="176dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="117dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="36dp"
+        android:text="Cost of the ticket"
+        app:layout_constraintEnd_toStartOf="@+id/textTicketCost"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/discountSpinner" />
+
+    <Button
+        android:id="@+id/buttonAddTicket"
+        android:layout_width="155dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="16dp"
+        android:text="Add Ticket"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView26" />
+
+    <Spinner
+        android:id="@+id/categorySpinner"
+        android:layout_width="250dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="90dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView25" />
+
+    <Spinner
+        android:id="@+id/discountSpinner"
+        android:layout_width="250dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="90dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView27" />
+
+    <TextView
+        android:id="@+id/textTicketCost"
+        android:layout_width="88dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="24dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/discountSpinner" />
+
+    <TextView
+        android:id="@+id/textView22"
+        android:layout_width="123dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="403dp"
+        android:text="Selected Tickets"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

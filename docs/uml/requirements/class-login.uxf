@@ -1,0 +1,73 @@
+<diagram program="umletino" version="15.1"><zoom_level>8</zoom_level><help_text></help_text><element><id>UMLClass</id><coordinates><x>616</x><y>24</y><w>208</w><h>24</h></coordinates><panel_attributes>androidx.lifecycle.ViewModel</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>816</x><y>24</y><w>120</w><h>24</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;130;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>920</x><y>0</y><w>272</w><h>64</h></coordinates><panel_attributes>LoginViewModel
+--
+--
++getPresenter() : LoginPresenter {query}</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1032</x><y>576</y><w>344</w><h>136</h></coordinates><panel_attributes>&lt;&lt;interface&gt;&gt;
+UserDAO
+--
+--
++delete(user : User)
++findAll():List&lt;User&gt; {query}
++save(user : User)
++findByEmail(email : String) : Customer {query}
++find(id : int) : User {query}
++nextId() : int</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>448</x><y>400</y><w>256</w><h>192</h></coordinates><panel_attributes>lt=&lt;-
+-customerDAO
+m1=1</panel_attributes><additional_attributes>10;220;300;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>328</x><y>576</y><w>344</w><h>136</h></coordinates><panel_attributes>&lt;&lt;interface&gt;&gt;
+CustomerDAO
+--
+--
++delete(customer : Customer)
++findAll() : List&lt;Customer&gt; {query}
++save(customer : Customer)
++findByCredentials(email : String, password : String) : Customer {query}
++find(id : int) : Customer {query}
++nextId() : int
++update(customer : Customer)</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>792</x><y>400</y><w>104</w><h>192</h></coordinates><panel_attributes>lt=&lt;-
+-organizerDAO
+m1=1</panel_attributes><additional_attributes>50;220;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>680</x><y>576</y><w>344</w><h>136</h></coordinates><panel_attributes>&lt;&lt;interface&gt;&gt;
+OrganizerDAO
+--
+--
++delete(organizer : Organizer)
++findAll():List&lt;Organizer &gt; {query}
++save(organizer : Organizer)
++findByCredentials(email : String, password : String) : Organizer  {query}
++find(id : int) : Organizer {query}
++nextId() : int
++update(organizer : Organizer)</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>888</x><y>400</y><w>232</w><h>192</h></coordinates><panel_attributes>lt=&lt;-
+-userDAO
+m1=1</panel_attributes><additional_attributes>270;220;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>968</x><y>56</y><w>104</w><h>216</h></coordinates><panel_attributes>lt=&lt;-
+-presenter
+m1=1</panel_attributes><additional_attributes>10;250;90;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>200</x><y>0</y><w>336</w><h>120</h></coordinates><panel_attributes>&lt;&lt;interface&gt;&gt;
+LoginView
+--
+--
++getEmail() : String {query}
++getPassword() : String {query}
++signup() :
++showOrganizerFoundMessage(id : int)
++showCustomerFoundMessage(id : int)
++showErrorMessage(title : String, message : String)
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>16</x><y>328</y><w>360</w><h>72</h></coordinates><panel_attributes>LoginActivity
+--
+--
+#onCreate(savedInstanceState: Bundle)
++navigateToCustomerHomePage(customerId:int)
++navigateToOrganizerHomePage(organizerId:int)</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>264</x><y>112</y><w>32</w><h>232</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>20;10;10;270</additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>176</y><w>160</w><h>24</h></coordinates><panel_attributes>lw=2
+AppCombatActivity</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>80</x><y>192</y><w>96</w><h>152</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;100;170</additional_attributes></element><element><id>UMLClass</id><coordinates><x>648</x><y>256</y><w>400</w><h>152</h></coordinates><panel_attributes>LoginPresenter
+--
+-view : LoginView
+-userDAO : UserDAO 
+-organizerDAO : OrganizerDAO
+-customerDAO : CustomerDAO 
+-emailInput : String 
+-passwordInput : String 
+--
++getView() : LoginView {query}
++setView( view : LoginView)
++onAuthenticateUser()
++onSignup()
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>368</x><y>56</y><w>568</w><h>328</h></coordinates><panel_attributes>lt=&lt;-
+-viewModel
+m1=1</panel_attributes><additional_attributes>690;10;10;390</additional_attributes></element><element><id>UMLClass</id><coordinates><x>112</x><y>512</y><w>120</w><h>40</h></coordinates><panel_attributes>&lt;&lt;layout&gt;&gt;
+activity_login</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>168</x><y>392</y><w>24</w><h>136</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>10;150;10;10</additional_attributes></element></diagram>

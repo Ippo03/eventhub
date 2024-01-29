@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.HomePage.HomePageActivity">
+
+    <Button
+        android:id="@+id/buttonLogin"
+        android:layout_width="136dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="28dp"
+        android:text="Login"
+        android:textSize="20sp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonRegister" />
+
+    <Button
+        android:id="@+id/buttonRegister"
+        android:layout_width="136dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="16dp"
+        android:text="Register"
+        android:textSize="20sp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/buttonLogin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.example.eventhub.view.Util.MultiSpinner
+        android:id="@+id/multiSpinnerGenres"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="20dp"
+        android:entries="@array/genres"
+        android:icon="@drawable/baseline_category_24"
+        android:textAlignment="textStart"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView18" />
+
+    <EditText
+        android:id="@+id/textInputEventFromDate"
+        android:layout_width="162dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="21dp"
+        android:ems="10"
+        android:hint="From: 01-03-2020"
+        android:inputType="date"
+        app:layout_constraintStart_toStartOf="@+id/textInputEventName"
+        app:layout_constraintTop_toBottomOf="@+id/textInputEventName" />
+
+    <EditText
+        android:id="@+id/textInputEventToDate"
+        android:layout_width="165dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="25dp"
+        android:ems="10"
+        android:hint="To: 12-06-2023"
+        android:inputType="date"
+        app:layout_constraintEnd_toEndOf="@+id/multiSpinnerGenres"
+        app:layout_constraintTop_toBottomOf="@+id/multiSpinnerGenres" />
+
+    <CheckBox
+        android:id="@+id/checkBoxOpen"
+        android:layout_width="112dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="26dp"
+        android:clickable="true"
+        android:text="Open"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:checkedState="unchecked"
+        app:layout_constraintStart_toStartOf="@+id/textInputEventFromDate"
+        app:layout_constraintTop_toBottomOf="@+id/textInputEventFromDate" />
+
+    <CheckBox
+        android:id="@+id/checkBoxClosed"
+        android:layout_width="112dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginEnd="10dp"
+        android:clickable="true"
+        android:text="Closed"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/checkBoxFree"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/checkBoxOpen"
+        app:layout_constraintTop_toBottomOf="@+id/textInputEventFromDate" />
+
+    <CheckBox
+        android:id="@+id/checkBoxFree"
+        android:layout_width="112dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="16dp"
+        android:checked="false"
+        android:clickable="true"
+        android:text="Free"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:centerIfNoTextEnabled="false"
+        app:checkedState="unchecked"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/checkBoxClosed"
+        app:layout_constraintTop_toBottomOf="@+id/textInputEventFromDate" />
+
+    <Button
+        android:id="@+id/buttonSearchEvent"
+        android:layout_width="155dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="12dp"
+        android:elegantTextHeight="true"
+        android:gravity="center_horizontal"
+        android:text="Search"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:icon="@android:drawable/ic_menu_search"
+        app:iconTint="#FFFFFF"
+        app:layout_constraintEnd_toStartOf="@+id/buttonResetFilters"
+        app:layout_constraintTop_toTopOf="@+id/buttonResetFilters" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="185dp"
+        android:layout_height="151dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/eventhub_logo_2_no" />
+
+    <EditText
+        android:id="@+id/textInputEventName"
+        android:layout_width="193dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="Type Event Name"
+        android:inputType="text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/select_sorting"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxOpen"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/textView18"
+        android:layout_width="103dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="160dp"
+        android:layout_marginEnd="68dp"
+        android:text="@string/select_genre"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/eventFeed"
+        android:layout_width="410dp"
+        android:layout_height="221dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="16dp"
+        android:clickable="true"
+        android:contextClickable="true"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.518"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonSearchEvent" />
+
+    <Button
+        android:id="@+id/buttonResetFilters"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="20dp"
+        android:text="Reset filters"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerSorting" />
+
+    <Spinner
+        android:id="@+id/spinnerSorting"
+        android:layout_width="360dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="2dp"
+        android:clickable="false"
+        android:contextClickable="false"
+        app:layout_constraintStart_toStartOf="@+id/textView17"
+        app:layout_constraintTop_toBottomOf="@+id/textView17" />
+
+    <ImageButton
+        android:id="@+id/buttonOpenSortingDialog"
+        android:layout_width="43dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="317dp"
+        android:src="@drawable/baseline_analytics_24"
+        app:layout_constraintStart_toStartOf="@+id/spinnerSorting"
+        app:layout_constraintTop_toTopOf="@+id/spinnerSorting" />
+
+    <Button
+        android:id="@+id/buttonCustomerEditAccount"
+        android:layout_width="160dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:text="Edit Account"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonCustomerPurchases"
+        android:layout_width="160dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="10dp"
+        android:text="Purchases"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/buttonCustomerEditAccount" />
+
+    <Button
+        android:id="@+id/buttonCustomerLogout"
+        android:layout_width="160dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="10dp"
+        android:text="Log Out"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/buttonCustomerPurchases" />
+
+    <TextView
+        android:id="@+id/emptySearchResults"
+        android:layout_width="338dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="39dp"
+        android:text="No events found with these search filters."
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonSearchEvent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

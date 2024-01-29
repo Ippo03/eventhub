@@ -1,0 +1,91 @@
+<diagram program="umletino" version="15.1"><zoom_level>8</zoom_level><help_text></help_text><element><id>UMLClass</id><coordinates><x>616</x><y>24</y><w>208</w><h>24</h></coordinates><panel_attributes>androidx.lifecycle.ViewModel</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>816</x><y>24</y><w>120</w><h>24</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;130;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>920</x><y>0</y><w>272</w><h>56</h></coordinates><panel_attributes>ReviewEventViewModel
+--
+--
++getPresenter() : ReviewEventPresenter {query}</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1032</x><y>576</y><w>344</w><h>136</h></coordinates><panel_attributes>&lt;&lt;interface&gt;&gt;
+ReviewDAO
+--
+--
++delete(review: Review)
++findAll():List&lt;Review&gt; {query}
++save(user : Review)
++find(id : int) : Review {query}
++nextId() : int</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>448</x><y>448</y><w>256</w><h>144</h></coordinates><panel_attributes>lt=&lt;-
+-eventDAO
+m1=1</panel_attributes><additional_attributes>10;160;300;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>328</x><y>576</y><w>344</w><h>136</h></coordinates><panel_attributes>&lt;&lt;interface&gt;&gt;
+EventDAO
+--
+--
++delete(event : Event)
++findAll() : List&lt;Event&gt; {query}
++save(event : Event)
++find(id : int) : Event {query}
++nextId() : int
++update(organizer : Organizer)
++findByName(name : String) : Event {query}
++findByGenre(genres : ArrayList&lt;Genre) : Set&lt;Event&gt; {query}
++findByType(types : ArrayList&lt;EventType&gt;) : Set&lt;Event&gt; {query}
++findByDateRange(from : LocalDate,
+ to : LocalDate) : Set&lt;Event&gt;  {query}
++findByCustomerInterests(interests : 
+Set&lt;Interest&gt;) : Set&lt;Event&gt;  {query}
++findFeedWithMostTicketsSold() : ArrayList&lt;Event&gt; {query}
++findFeedWithMostEventCapacity() :  ArrayList&lt;Event&gt; {query}
++findFeedWithMostAvailableTickets(): ArrayList&lt;Event&gt; {query}
++sortEventsByCapacity(events : ArrayList&lt;Event&gt;) : ArrayList&lt;Event&gt;
++sortEventsByTicketsSold(events : ArrayList&lt;Event&gt;) : ArrayList&lt;Event&gt;
++sortEventsByRating(events : ArrayList&lt;Event&gt;) : ArrayList&lt;Event&gt;
++sortEventsByCloserDate(events : ArrayList&lt;Event&gt;) : ArrayList&lt;Event&gt;
++sortEventsByFartherDate(events : ArrayList&lt;Event&gt;) : ArrayList&lt;Event&gt;</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>792</x><y>448</y><w>104</w><h>144</h></coordinates><panel_attributes>lt=&lt;-
+-organizerDAO
+m1=1</panel_attributes><additional_attributes>50;160;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>680</x><y>576</y><w>344</w><h>136</h></coordinates><panel_attributes>&lt;&lt;interface&gt;&gt;
+OrganizerDAO
+--
+--
++delete(organizer : Organizer)
++findAll():List&lt;Organizer &gt; {query}
++save(organizer : Organizer)
++findByCredentials(email : String, password : String) : Organizer {query}
++find(id : int) : Organizer {query}
++nextId() : int
++update(organizer : Organizer)</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>888</x><y>448</y><w>232</w><h>144</h></coordinates><panel_attributes>lt=&lt;-
+-reviewDAO
+m1=1</panel_attributes><additional_attributes>270;160;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>968</x><y>48</y><w>104</w><h>224</h></coordinates><panel_attributes>lt=&lt;-
+-presenter
+m1=1</panel_attributes><additional_attributes>10;260;90;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>200</x><y>0</y><w>336</w><h>104</h></coordinates><panel_attributes>&lt;&lt;interface&gt;&gt;
+ReviewEventView
+--
+--
++getGrade() : String {query}
++getComment() : String {query}
++showEventName() : 
++showReviewSavedMessage(id : int)
++showErrorMessage(title : String, message : String)
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>16</x><y>328</y><w>320</w><h>80</h></coordinates><panel_attributes>ReviewEventActivity
+--
+-eventId : int
+-customerId : int
+-viewModel : ReviewEventViewModel 
+--
+#onCreate(savedInstanceState: Bundle)</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>264</x><y>96</y><w>32</w><h>248</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>20;10;10;290</additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>176</y><w>160</w><h>24</h></coordinates><panel_attributes>lw=2
+AppCombatActivity</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>80</x><y>192</y><w>96</w><h>152</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;100;170</additional_attributes></element><element><id>UMLClass</id><coordinates><x>648</x><y>256</y><w>400</w><h>200</h></coordinates><panel_attributes>ReviewEventPresenter
+--
+- view : ReviewEventView
+- organizerDAO : OrganizerDAO
+- eventDAO : EventDAO
+- reviewDAO : ReviewDAO
+- customer : Customer
+- event : Event 
+--
++getView() : ReviewEventView {query}
++setView( view : ReviewEventView)
++setCustomer(customer : Customer)
++getCustomer() : Customer {query}
++setEvent(event : Event) 
++getEvent() : Event {query}
++onShowEventName()
++onReviewEvent
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>328</x><y>48</y><w>608</w><h>336</h></coordinates><panel_attributes>lt=&lt;-
+-viewModel
+m1=1</panel_attributes><additional_attributes>740;10;10;400</additional_attributes></element><element><id>UMLClass</id><coordinates><x>112</x><y>512</y><w>120</w><h>40</h></coordinates><panel_attributes>&lt;&lt;layout&gt;&gt;
+activity_login</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>168</x><y>400</y><w>24</w><h>128</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>10;140;10;10</additional_attributes></element></diagram>

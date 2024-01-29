@@ -1,0 +1,257 @@
+<diagram program="umletino" version="15.1"><zoom_level>7</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>0</x><y>560</y><w>189</w><h>273</h></coordinates><panel_attributes>User
+--
+# firstName : String
+# lastName : String
+# email : String
+# age : Integer
+# gender: String
+# address : Address
+# password: String
+--
++ getFirstName() : String {query}
++ setFirstName(firstName : String)
++ getLastName() : String {query}
++ setLastName(lastName : String)
++ getEmail() : String {query}
++ setEmail(email : String)
++ getAge() : Integer {query}
++ setAge(age : Integer): 
++ getGender() : String {query}
++ setGender(gender : String)
++ getAddress() : Address {query}
++ setAddress(address : Address)
++ getPassword() : String {query}
++ setPassword(password : String)
++ changeUserSettings(firstName : String,
+lastName : String, email : String, age : Integer,
+address : Address)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>245</x><y>805</y><w>182</w><h>112</h></coordinates><panel_attributes>Customer
+--
+- interest : Set&lt;Interest&gt;
+--
++ getInterests() : Set&lt;Interest&gt; 
++ getPurchases() : Set&lt;Purchase&gt;
++ addInterest(interest : Interest)
++ removeInterest(interest : Interest)
++ addPurchase(purchase : Purchase)
++ removePurchase(purchase : Purchase)
++ canReview(event : Event) : boolean</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>14</x><y>861</y><w>168</w><h>56</h></coordinates><panel_attributes>Interest
+--
+- interestName : Genre
+--
++ setInterestName(interestName : Genre)
++ getInterestName() : Genre {query}</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>861</x><y>686</y><w>189</w><h>147</h></coordinates><panel_attributes>Money
+--
+- amount: BigDecimal
+- currency: Currency
+--
++ getAmount() : Decimal {query}
++ getCurrency() : Currency
++ setAmount(amount : BigDecimal)
++ setCurrency(currency : Currency)
+_+ euros(amount : BigDecimal) : Money_
++ plus(other : Money) : Money
++ minus(other : Money) : Money
++ times(factor : BigDecimal) : Money
++ times(factor : double) : Money
+- checkForSameCurrencies(other : Money)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>518</x><y>224</y><w>245</w><h>378</h></coordinates><panel_attributes>Event
+--
+- name : String
+- address: Address
+- dateTime : LocalDateTime
+# genre : Genre
+# type : EventType
+- averageRating : double
+- eventCapacity : Integer = 0
+- availableTickets : Integer = 0
+- ticketsSold : Integer = 0
+--
++ getName() : String {query}
++ getLocation() : Address {query}
++ getDate() : LocalDateTime {query}
++ getGenre() : Genre {query}
++ getType() : EventType {query}
++ getTicketCategories() : Set&lt;TicketCategory&gt; {query}
++ getTikcetDiscounts() : Set&lt;TicketDiscount&gt; {query}
++ getReviews() : Set&lt;Review&gt; {query}
++ setName(name : String)
++ setLocation(location : Address)
++ setDate(date : LocalDateTime)
++ setGenre(genre : Genre)
++ setType(type : EventType)
++ setTicketCategories(ticketCategories : Set&lt;TicketCategory&gt;)
++ setTicketDiscounts(ticketDiscounts : Set&lt;TicketDiscount&gt;)
++ addReview(review : Review)
++ removeReview(review : Review)
++ getAverageRating() : double
++ calculateEventCapacity()
++ calculateAvailableTickets() 
++ calculateTicketsSold()
++ getEventCapacity() : Integer
++ getAvailableTickets() : Integer
++ getTicketsSold() : Integer
++ conflictWith(event : Event) : boolean</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>259</x><y>364</y><w>56</w><h>63</h></coordinates><panel_attributes> &lt;&lt; enum &gt;&gt;
+EventType
+--
+OPEN
+CLOSED
+FREE</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>126</x><y>280</y><w>70</w><h>126</h></coordinates><panel_attributes>&lt;&lt; enum &gt;&gt;
+Genre 
+--
+FOOD
+MUSIC
+SPORT
+ART
+SCIENCE
+CINEMA
+EDUCATION
+BUSINESS
+OTHER
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>889</x><y>350</y><w>259</w><h>203</h></coordinates><panel_attributes>Ticket
+--
+- ticketPrice : Money
+- ticketState : TicketState
+--
++ getTicketState() : TicketState {query}
++ setTicketState(ticketState : TicketState)
++ getEvent() : Event {query}
++ getTicketDiscount() : TicketDiscount {query} 
++ getTicketCategory() : TicketCategory {query}
++ setTicketDiscount(discount : TicketDiscount)
++ setTicketCategory(category : TicketCategory)
++ getTicketPrice() : Money
+- calculateNewPrice(startPrice : Money, 
+discountPercentage : double) : Money
++ categoryMatchWithEvent(category : TicketCategory) : boolean
++ discountMatchWithEvent(discount: TicketDiscount) : boolean
++ buyTicket() 
++ reserveTicket()
++ cancelTicket()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>588</x><y>763</y><w>147</w><h>112</h></coordinates><panel_attributes>Purchase
+--
+- date : LocalDate
+- totalCost : Money
+--
++ getDate() : LocalDate {query}
++ setDate(date : LocalDate)
++ getCost() : Money {query}
++ getTickets() : Set&lt;Ticket&gt; {query}
++ getEvent() : Event {query}
+# calculateTotalCost() </panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>252</x><y>469</y><w>161</w><h>119</h></coordinates><panel_attributes>Organizer
+--
+- ssn : Integer
+- rating : BigDecimal
+--
++ setSsn(ssn : Integer)
++ getSsn() : Integer {query}
++ getRating() : BigDecimal {query}
++ getEvents() : Set&lt;Event&gt; {query}
++ addEvent(event : Event)
++ removeEvent(event : Event)
++ calculateRating() 
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>273</x><y>630</y><w>147</w><h>112</h></coordinates><panel_attributes>Review
+--
+- grade : Integer
+- comment : String
+--
++ setGrade(grade : BigDecimal)
++ getGrade() : BigDecimal {query}
++ setComment(comment : String)
++ getComment() : String {query}
++ setCustomer(customer : Customer)
++ getCustomer() : Customer {query}</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>574</x><y>21</y><w>189</w><h>91</h></coordinates><panel_attributes>TicketDiscount
+--
+- type : DiscountType
+- percentage : double
+--
++ setType(type : DiscountType)
++ getType() : DiscountType {query}
++ setPercentage(percentage : double)
++ getPercentage() : double {query}</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>812</x><y>0</y><w>168</w><h>168</h></coordinates><panel_attributes>TicketCategory
+--
+- name : CategoryName
+- description : String
+- price : Money
+- quantity : Integer
+# ticketsSold : Integer
+--
++ setName(name : CategoryName)
++ getName() : CategoryName {query}
++ setDescription(description : String)
++ getDescription() : String {query}
++ setPrice(price : Money)
++ getPrice() : Money {query}
++ setQuantity(quantity : Integer)
++ getQuantity() : Integer {query} 
++ getTicketsSold() : Integer</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>378</x><y>231</y><w>84</w><h>84</h></coordinates><panel_attributes>&lt;&lt;enum&gt;&gt;
+DiscountType
+--
+GENERAL
+CHILD
+STUDENT
+SENIOR
+DISABILITY
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>238</x><y>224</y><w>77</w><h>91</h></coordinates><panel_attributes>&lt;&lt;enum&gt;&gt;
+CategoryName
+--
+GENERAL
+FRONT
+VIP
+VIP_PLUS
+SIDE
+STANDING</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>182</x><y>728</y><w>77</w><h>126</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
+</panel_attributes><additional_attributes>10;10;90;160</additional_attributes></element><element><id>Relation</id><coordinates><x>182</x><y>553</y><w>84</w><h>119</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
+</panel_attributes><additional_attributes>10;150;100;10</additional_attributes></element><element><id>Relation</id><coordinates><x>406</x><y>441</y><w>147</w><h>133</h></coordinates><panel_attributes>lt=-&gt;
+m1=1
+m2=*
+manages &gt;</panel_attributes><additional_attributes>10;160;120;160;120;10;160;10</additional_attributes></element><element><id>Relation</id><coordinates><x>756</x><y>448</y><w>147</w><h>35</h></coordinates><panel_attributes>lt=&lt;-
+m1=1
+m2=*
+has &gt;</panel_attributes><additional_attributes>10;21;190;20</additional_attributes></element><element><id>Relation</id><coordinates><x>413</x><y>595</y><w>231</w><h>105</h></coordinates><panel_attributes>lt=-&gt;
+m1=1
+m2=*
+&lt; has</panel_attributes><additional_attributes>300;11;300;120;10;120</additional_attributes></element><element><id>Relation</id><coordinates><x>329</x><y>735</y><w>56</w><h>84</h></coordinates><panel_attributes>lt=&lt;-
+m1=1
+m2=*
+makes &gt;</panel_attributes><additional_attributes>10;100;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>973</x><y>77</y><w>189</w><h>287</h></coordinates><panel_attributes>lt=-&gt;
+m1=*
+m2=1 -ticketCategory
+belongs to &gt;</panel_attributes><additional_attributes>180;390;180;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>728</x><y>105</y><w>203</w><h>259</h></coordinates><panel_attributes>lt=-&gt;
+m1=*
+m2=1 -ticketDiscount
+has &gt;</panel_attributes><additional_attributes>260;350;260;140;10;140;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>728</x><y>546</y><w>287</w><h>294</h></coordinates><panel_attributes>lt=-&gt;
+m1=1
+m2=1..n
+corresponds to &gt;</panel_attributes><additional_attributes>10;390;130;390;130;150;370;150;370;10</additional_attributes></element><element><id>Relation</id><coordinates><x>420</x><y>819</y><w>182</w><h>91</h></coordinates><panel_attributes>lt=-&gt;
+m1=1
+m2=*
+makes &gt;</panel_attributes><additional_attributes>10;100;120;100;120;10;240;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>378</x><y>357</y><w>91</w><h>77</h></coordinates><panel_attributes>&lt;&lt;enum&gt;&gt;
+TicketState
+--
+AVAILABLE
+BOUGHT
+RESERVED
+CANCELLED</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1085</x><y>672</y><w>168</w><h>182</h></coordinates><panel_attributes>Address
+--
+- street : String
+- number : Integer
+- city : String
+- zip : String
+- country : String = "Greece"
+--
++ getStreet() String : {query}
++ setStreet(street : String) 
++ getNumber() : Integer {query}
++ setNumber(number : Integer)
++ getCity() : String {query}
++ setCity(city : String) {query}
++ getZip() : String {query}
++ setZip(zip : String) 
++ getCountry() : String {query}
++ setCountry(country : String) 
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>581</x><y>105</y><w>42</w><h>133</h></coordinates><panel_attributes>lt=-&gt;
+m1=*
+m2=1..*
+has &gt;</panel_attributes><additional_attributes>10;170;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>665</x><y>147</y><w>161</w><h>91</h></coordinates><panel_attributes>lt=-&gt;
+m1=*
+m2=1..*
+has &gt;</panel_attributes><additional_attributes>10;110;10;20;210;20</additional_attributes></element></diagram>

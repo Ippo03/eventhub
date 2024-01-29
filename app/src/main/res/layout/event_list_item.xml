@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/textEventName"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:hint="Event NAME"
+        app:layout_constraintEnd_toStartOf="@+id/textEventDate"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textEventDate"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:hint="Event DATE"
+        app:layout_constraintBottom_toBottomOf="@+id/textEventName"
+        app:layout_constraintEnd_toStartOf="@+id/textEventLocation"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textEventName"
+        app:layout_constraintTop_toTopOf="@+id/textEventName" />
+
+    <TextView
+        android:id="@+id/textEventLocation"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:hint="Event LOCATION"
+        app:layout_constraintBottom_toBottomOf="@+id/textEventDate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textEventDate"
+        app:layout_constraintTop_toTopOf="@+id/textEventDate" />
+
+    <TextView
+        android:id="@+id/textMatchingEvent"
+        android:layout_width="228dp"
+        android:layout_height="21dp"
+        android:text="This event matches your interests"
+        android:textColor="#4CAF50"
+        app:layout_constraintStart_toStartOf="@+id/textEventName"
+        app:layout_constraintTop_toBottomOf="@+id/textEventName" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

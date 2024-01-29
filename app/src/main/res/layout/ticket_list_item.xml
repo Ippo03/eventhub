@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageButton
+        android:id="@+id/btnRemoveCategory"
+        android:layout_width="45dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="35dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textTicketPrice"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/icon_remove_48" />
+
+    <TextView
+        android:id="@+id/textTicketQuantity"
+        android:layout_width="40dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="35dp"
+        android:text="Quantity"
+        app:layout_constraintEnd_toStartOf="@+id/textTicketCategory"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textTicketCategory"
+        android:layout_width="90dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="35dp"
+        android:text="Category"
+        app:layout_constraintEnd_toStartOf="@+id/textTicketDiscount"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textTicketQuantity"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textTicketDiscount"
+        android:layout_width="90dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="35dp"
+        android:text="Discount"
+        app:layout_constraintEnd_toStartOf="@+id/textTicketPrice"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textTicketCategory"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textTicketPrice"
+        android:layout_width="85dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="35dp"
+        android:text="Price"
+        app:layout_constraintEnd_toStartOf="@+id/btnRemoveCategory"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textTicketDiscount"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
